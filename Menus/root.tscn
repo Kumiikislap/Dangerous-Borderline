@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cs1kyekjox8nu"]
+
+[node name="root" type="Node"]
+
+[node name="Game_Manager" type="Node2D" parent="."]
+
+[node name="Scene_Manager" type="Node2D" parent="Game_Manager"]

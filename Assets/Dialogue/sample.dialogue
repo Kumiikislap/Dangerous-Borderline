@@ -1,0 +1,23 @@
+~ start
+Nathan: [[Hi|Hello|Howdy]], this is some dialogue. 
+Nathan: Here are some choices. 
+{{blank:}}{{blank}} [next=2]
+Ruka: ... 
+do! fade_transition(room)
+Nathan: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATEST
+do! fade_transition(sea)
+Nathan: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlong
+Ruka: long test 
+Ruka: a
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END
+
+~ test
+a: what??
+=>
