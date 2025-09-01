@@ -2,9 +2,9 @@ extends CanvasLayer
 var resource = preload("res://Assets/Dialogue/sample.dialogue")
 const TEST = preload("res://Assets/Dialogue/test.dialogue")
 const BG_107A = preload("res://Assets/BGs/BG107A.png")
-const BG = preload("res://Assets/BGs/BG.png")
+const BG_Fellis = preload("res://Assets/BGs/BG26A.PNG")
 
-var sea = BG
+var living_room = BG_Fellis
 var room = BG_107A
 var next_bg 
 
@@ -30,7 +30,6 @@ func _ready() -> void:
 	#await get_tree().create_timer(0.5).timeout
 	#print(dialogue_line["character"]) # omg it works 
 	#print(dialogue_line["text"])
-	
 
 
 

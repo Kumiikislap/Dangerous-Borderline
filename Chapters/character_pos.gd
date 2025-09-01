@@ -29,6 +29,7 @@ func get_visible_chara(): # data struct: Chara(dict):= dict { pos: name: }
 			chara_present_on_current_cut[child.name.to_lower()] = { "position": child.position, "expr": child.current_sprite}
 			print(chara_present_on_current_cut)
 			#print(copy)
+
 func _ready() -> void:
 	k_angle_test.position.x = right
 	k_angle_test_2.position.x = center

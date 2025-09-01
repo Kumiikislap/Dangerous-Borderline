@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://clem61wui6lua" path="res://Chapters/Ch1/vn_main.gd" id="1_klbvn"]
 [ext_resource type="PackedScene" uid="uid://bek3lqomxdvmi" path="res://Assets/Dialogue/balloon.tscn" id="2_w5h5c"]
-[ext_resource type="Texture2D" uid="uid://bmv4iotgxht5b" path="res://Assets/BGs/BG.png" id="3_a3qt6"]
+[ext_resource type="Texture2D" uid="uid://bnsbai46pjgua" path="res://Assets/BGs/BG26A.PNG" id="3_nkqei"]
 [ext_resource type="Script" uid="uid://bsr5jolhdqp0d" path="res://Chapters/character_pos.gd" id="4_4x82w"]
 [ext_resource type="PackedScene" uid="uid://c0gracp0pw8vj" path="res://Characters/k_angle_test.tscn" id="5_y8cw7"]
 [ext_resource type="Script" uid="uid://cvqmyjw4vshy0" path="res://Menus/history_log.gd" id="6_w5h5c"]
@@ -120,7 +120,7 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 2
-texture = ExtResource("3_a3qt6")
+texture = ExtResource("3_nkqei")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
@@ -148,6 +148,7 @@ libraries = {
 
 [node name="Character" type="Node2D" parent="CharacterManager"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 script = ExtResource("4_4x82w")
 
 [node name="KAngle_test" parent="CharacterManager/Character" groups=["Characters"] instance=ExtResource("5_y8cw7")]
@@ -309,4 +310,5 @@ script = null
 
 [node name="S_Load_Menu" parent="." instance=ExtResource("10_j670c")]
 layer = 100
+visible = false
 script = ExtResource("11_nkqei")

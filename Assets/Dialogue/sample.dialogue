@@ -5,7 +5,7 @@ Nathan: Here are some choices.
 Ruka: ... 
 do! fade_transition(room)
 Nathan: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATEST
-do! fade_transition(sea)
+do! fade_transition(living_room)
 Nathan: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlong
 Ruka: long test 
 Ruka: a

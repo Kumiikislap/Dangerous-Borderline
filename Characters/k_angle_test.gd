@@ -1,5 +1,5 @@
 extends Character_sprite
-class_name Luka          # -- needs to be registered class to access class methods
+class_name Luka          # -- needs to be registered class to access class methods(?)
 var resource = preload("res://Assets/Dialogue/sample.dialogue")
 
 const RUK_BACK = preload("res://Assets/Characters/Luka/RUK_back.png")
@@ -19,8 +19,10 @@ var next_sprite = back   # -- default expr
 @onready var last_sprite : Sprite2D = $first_sprite
 
 var current_sprite 
-var is_first_on := true       #-- animations ----- true = first sprite
+# 2 months later, I'm confuse what these 2 does
+var is_first_on := true       #-- animations ----- true = first sprite 
 var next := true              # -- for changing sprite
+
 
 func _ready() -> void:
 	#enter_character()
@@ -28,19 +30,22 @@ func _ready() -> void:
 
 
 # TODO
-# -- test second call of change
+# -- test second call of change --- what??
 # -- auto-complete in func arguments
 
-#func _unhandled_input(event: InputEvent) -> void:
-	#if event.is_action_pressed("ui_up"):
-		#change_Fadesprite(back)            
-	#if event.is_action_pressed("ui_down"):
-		#change_Fadesprite(blush)
-	#if event.is_action_pressed("ui_right"):
-		#change_Fadesprite(blink)
-	#if event.is_action_pressed("ui_accept"):
-		#enter_character()
+# for testing changing sprites
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_up"):
+		change_Fadesprite(back)            
+	if event.is_action_pressed("ui_down"):
+		change_Fadesprite(blush)
+	if event.is_action_pressed("ui_right"):
+		change_Fadesprite(blink)
+	if event.is_action_pressed("ui_accept"):
+		enter_character()
 
+# -- change sprite animation
+# by fading last sprite while next sprite gets inserted below last sprite
 func change_Fadesprite(sprite):
 	next_sprite = sprite
 	current_sprite = sprite
