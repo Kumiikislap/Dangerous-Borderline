@@ -152,7 +152,7 @@ _data = {
 
 [node name="KAngle_test" type="Sprite2D"]
 texture_filter = 1
-position = Vector2(909, 840)
+position = Vector2(1287, 615)
 script = ExtResource("2_51357")
 
 [node name="Second_sprite" type="Sprite2D" parent="."]

@@ -148,7 +148,6 @@ libraries = {
 
 [node name="Character" type="Node2D" parent="CharacterManager"]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
 script = ExtResource("4_4x82w")
 
 [node name="KAngle_test" parent="CharacterManager/Character" groups=["Characters"] instance=ExtResource("5_y8cw7")]

@@ -1,6 +1,7 @@
 ~ start
 Nathan: [[Hi|Hello|Howdy]], this is some dialogue. 
-Nathan: Here are some choices. 
+# changing expressions needs to be inline to be animated
+Nathan: [do change_character_expression(Luka.Expressions.neutral)] Here are some choices. 
 {{blank:}}{{blank}} [next=2]
 Ruka: ... 
 do! fade_transition(room)

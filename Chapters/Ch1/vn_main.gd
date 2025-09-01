@@ -32,6 +32,8 @@ func _ready() -> void:
 	#print(dialogue_line["text"])
 
 
+func change_character_expression(sprite : Luka.Expressions):
+	k_angle_test.change_Fadesprite(sprite)
 
 func enter_uis():
 	GlobalSignals.balloon_fade_enter.emit()

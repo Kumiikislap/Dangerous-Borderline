@@ -7,12 +7,12 @@ const RUK_BLINK = preload("res://Assets/Characters/Luka/RUK_blink.png")
 const RUK_BLUSH = preload("res://Assets/Characters/Luka/RUK_blush.png")
 const RUK_NEUTRAL = preload("res://Assets/Characters/Luka/RUK_neutral.png")
 
-enum {neutral, blush, blink, back}
+enum Expressions {neutral, blush, blink, back}
 
 @onready var first_sprite: Sprite2D = $first_sprite
 @onready var second_sprite: Sprite2D = $Second_sprite
 
-var next_sprite = back   # -- default expr
+var next_sprite = Expressions.back   # -- default expr
 @onready var animator: AnimationPlayer = $Animator
 
 @onready var new_sprite : Sprite2D = $Second_sprite  # both sprite needs to be visible
@@ -26,7 +26,7 @@ var next := true              # -- for changing sprite
 
 func _ready() -> void:
 	#enter_character()
-	change_Fadesprite(blush)
+	change_Fadesprite(Expressions.blush)
 
 
 # TODO
@@ -36,17 +36,17 @@ func _ready() -> void:
 # for testing changing sprites
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_up"):
-		change_Fadesprite(back)            
+		change_Fadesprite(Expressions.back)            
 	if event.is_action_pressed("ui_down"):
-		change_Fadesprite(blush)
+		change_Fadesprite(Expressions.blush)
 	if event.is_action_pressed("ui_right"):
-		change_Fadesprite(blink)
+		change_Fadesprite(Expressions.blink)
 	if event.is_action_pressed("ui_accept"):
 		enter_character()
 
 # -- change sprite animation
 # by fading last sprite while next sprite gets inserted below last sprite
-func change_Fadesprite(sprite):
+func change_Fadesprite(sprite : Expressions):
 	next_sprite = sprite
 	current_sprite = sprite
 	if is_first_on:
@@ -64,26 +64,26 @@ func change_Fadesprite(sprite):
 func change_sprite():
 	if next:
 		match next_sprite:
-			blush:     # 1 Blush
+			Expressions.blush:     # 1 Blush
 				second_sprite.texture = RUK_BLUSH
-			back:      # 3 Back
+			Expressions.back:      # 3 Back
 				second_sprite.texture = RUK_BACK
-			neutral:   # 0 Neutral
+			Expressions.neutral:   # 0 Neutral
 				second_sprite.texture = RUK_NEUTRAL
-			blink:     # 2 Blink
+			Expressions.blink:     # 2 Blink
 				second_sprite.texture = RUK_BLINK
 			_:
 				print(str(new_sprite) + " isn't found!")   # -- error handling when str isnt found
 		next = false
 	elif !next:
 		match next_sprite:
-			blush:
+			Expressions.blush:
 				first_sprite.texture = RUK_BLUSH
-			back:
+			Expressions.back:
 				first_sprite.texture = RUK_BACK
-			neutral:
+			Expressions.neutral:
 				first_sprite.texture = RUK_NEUTRAL
-			blink:
+			Expressions.blink:
 				first_sprite.texture = RUK_BLINK
 			_:
 				print(str(next_sprite) + " isn't found!")
