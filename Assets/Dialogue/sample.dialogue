@@ -1,5 +1,8 @@
 ~ start
+# blank dialogue and some delay
+  :  [next=2] 
 Nathan: [[Hi|Hello|Howdy]], this is some dialogue. 
+{{blank:}}{{blank}} [next=2]
 # changing expressions needs to be inline to be animated
 Nathan: [do change_character_expression(Luka.Expressions.neutral)] Here are some choices. 
 {{blank:}}{{blank}} [next=2]
