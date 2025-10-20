@@ -1,4 +1,5 @@
 class_name SavedGame extends Resource
+# conflict test a
 
 @export var chapter: int 
 
